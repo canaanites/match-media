@@ -15,7 +15,7 @@ class MediaQuery {
 
   constructor(private query: string) {
     // notice we don't need an async function
-    // Also if an error occurs, await-catcher will handle it (no need for try/catch)
+    // Also if an error occurs, await-catcher will handle it.
     awaitCatcherAsync(
        ScreenOrientation.getOrientationAsync(), 
        (data, error) => this.updateListeners({ orientation: data.orientation }); 
